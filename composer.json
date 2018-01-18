@@ -1,0 +1,41 @@
+{
+  "name": "dostoevski/preparer",
+  "description": "Prepare xml for generate doc",
+  "type": "library",
+  "keywords": [
+    "php",
+    "documentor"
+  ],
+  "license": "MIT License",
+  "homepage": "https://github.com/dostoevski/preparer",
+  "authors": [
+    {
+      "name": "Malofeykin Andrey",
+      "email": "and-rey2@yandex.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "zendframework/zend-coding-standard": "~1.0.0",
+    "phpunit/phpunit": "^6.2.3"
+
+  },
+  "autoload": {
+    "psr-4": {
+      "Dostoevski\\Preparer\\": "src/"
+    },
+    "classmap": [
+      "src/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Dostoevski\\Preparer\\PhpUnit\\Test\\": "test/phpunit/tests"
+    },
+    "classmap": [
+      "test/"
+    ]
+  }
+}

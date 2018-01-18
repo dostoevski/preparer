@@ -1,0 +1,7 @@
+docs_dir: doc/book/ru
+pages:
+    - index.md
+site_name: module-options
+site_description: 'Генерация xml файла с описанием структуры проекта.'
+repo_url: 'https://github.com/dostoevski/preparer'
+copyright: 'Copyright (c) 2018 <a href="https://github.com/dostoevski/preparer">Dostoevski</a>'
