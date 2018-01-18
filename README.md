@@ -8,5 +8,4 @@ Master:
 [![Documentation Status](https://readthedocs.org/projects/dostoevski-preparer/badge/?version=master)](http://dostoevski-preparer.readthedocs.org/ru/latest/?badge=master)
 
 
-
 Подготавливает xml которая содержит данные о классах
