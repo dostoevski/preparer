@@ -5,10 +5,10 @@ sudo: false
 matrix:
   fast_finish: true
   include:
-    - php: 7.1
+    - php: 7.0
       env:
         - EXECUTE_CS_CHECK=true
-    - php: 7.2
+    - php: 7.1
       env:
         - EXECUTE_TEST_COVERALLS=true
 
@@ -25,10 +25,6 @@ before_install:
 install:
   - travis_retry composer install --no-interaction --ignore-platform-reqs
 
-
-before_script:
-  - mysql -e 'create database test_database_name;'
-
 script:
   - if [[ $EXECUTE_TEST_COVERALLS == 'true' ]]; then ./vendor/bin/phpunit --configuration $TRAVIS_BUILD_DIR/phpunit.xml.travis --coverage-php $TRAVIS_BUILD_DIR/build/logs/coverage/coverage-phpunit.cov; fi
   - if [[ $EXECUTE_TEST_COVERALLS != 'true' ]]; then ./vendor/bin/phpunit --configuration $TRAVIS_BUILD_DIR/phpunit.xml.travis ; fi
@@ -42,7 +38,3 @@ after_script:
 notifications:
   email:
   - and-rey2@yandex.ru
-
-
-services:
-  - mysql
