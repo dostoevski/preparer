@@ -30,7 +30,7 @@ script:
   - if [[ $EXECUTE_TEST_COVERALLS == 'true' ]]; then ./vendor/bin/phpunit --configuration $TRAVIS_BUILD_DIR/phpunit.xml.travis --coverage-php $TRAVIS_BUILD_DIR/build/logs/coverage/coverage-phpunit.cov; fi
   - if [[ $EXECUTE_TEST_COVERALLS != 'true' ]]; then ./vendor/bin/phpunit --configuration $TRAVIS_BUILD_DIR/phpunit.xml.travis ; fi
   - if [[ $EXECUTE_CS_CHECK == 'true' ]]; then  ./vendor/bin/php-cs-fixer fix -v --diff --dry-run --config-file ./.php_cs ; fi
-  - ls -al $TRAVIS_BUILD_DIR/build/logs/coverage/
+  - ls -al $TRAVIS_BUILD_DIR/build/logs/coverage/coverage-phpunit.cov
 
 after_script:
   - if [[ $EXECUTE_TEST_COVERALLS == 'true' ]]; then ./vendor/bin/phpcov merge --clover $TRAVIS_BUILD_DIR/build/logs/clover.xml $TRAVIS_BUILD_DIR/build/logs/coverage ; fi
