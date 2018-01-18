@@ -19,9 +19,10 @@
   },
   "require-dev": {
     "zendframework/zend-coding-standard": "~1.0.0",
-    "phpunit/phpunit": "^6.2.3",
+    "phpunit/phpunit": "6.5.5",
     "php-coveralls/php-coveralls": "2.0",
-    "phpunit/phpcov":"4.0.4"
+    "phpunit/phpcov":"4.0.4",
+    "squizlabs/php_codesniffer": "2.9.1"
   },
   "autoload": {
     "psr-4": {
