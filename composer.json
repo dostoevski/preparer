@@ -19,7 +19,8 @@
   },
   "require-dev": {
     "zendframework/zend-coding-standard": "~1.0.0",
-    "phpunit/phpunit": "^6.2.3"
+    "phpunit/phpunit": "^6.2.3",
+    "php-coveralls/php-coveralls": "2.0"
 
   },
   "autoload": {
